@@ -4,7 +4,7 @@
   <title><![CDATA[BootDB]]></title>
   <link href="http://www.bootdb.com/atom.xml" rel="self"/>
   <link href="http://www.bootdb.com/"/>
-  <updated>2017-01-10T19:08:55+05:30</updated>
+  <updated>2017-02-06T11:37:11+05:30</updated>
   <id>http://www.bootdb.com/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[Metric Analytics &amp; Alerting]]></title>
-    <link href="http://www.bootdb.com/title/"/>
-    <updated>2017-01-10T19:08:46+05:30</updated>
-    <id>http://www.bootdb.com/metric-analytics-and-alerting</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Fix Floating Point Precision in JavaScript]]></title>
@@ -446,6 +437,21 @@ Write-Host "exit code: " + $p.ExitCode
 </code></pre>
 
 <p>This will convert all cr2 files a directory into jpeg files, later if you don&#8217;t want cr2 files use <strong>rm -f *.cr2</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Mac Theme in Ubuntu]]></title>
+    <link href="http://www.bootdb.com/install-mac-theme-ubuntu/"/>
+    <updated>2016-12-12T19:38:11+05:30</updated>
+    <id>http://www.bootdb.com/install-mac-theme-ubuntu</id>
+    <content type="html"><![CDATA[<p>Make your Ubuntu look like a Mac by installing mac theme:</p>
+
+<pre><code>sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install mac-ithemes-v3
+sudo apt-get install mac-icons-v3
+</code></pre>
 ]]></content>
   </entry>
   

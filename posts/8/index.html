@@ -9,7 +9,7 @@
   <meta name="author" content="">
 
   
-  <meta name="description" content="Sublime plugins can be of great use to improve productivity, to get started let’s create a plugin named hello which prints Hello World! in the &hellip;">
+  <meta name="description" content="Sublime provides an api to open custom files in the current sublime’s view: Below is the sample plugin which opens file /tmp/hello.txt: Read more &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,65 +65,6 @@
     <div id="content">
       <div class="blog-index">
   
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/getting-started-with-sublime-plugins/">Getting Started With Sublime Plugins</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-10-29T11:58:13+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>11:58 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Sublime plugins can be of great use to improve productivity, to get started let’s create a plugin named <strong>hello</strong> which prints <strong>Hello World!</strong> in the sublime’s debug console when <strong>Ctrl+Shift+h</strong> is pressed.</p>
-
-<ol>
-<li>Create plugin file:</li>
-</ol>
-
-
-<p>Create PLUGIN_NAME.py file in sublime text User folder, here let’s create hello.py:</p>
-
-<blockquote><p>touch /home/user/.config/sublime-text-3/Packages/User/hello.py</p></blockquote>
-
-<p>2. Writing plugin:</p>
-
-<p>Sublime text expects a class with the following syntax in the plugin file PLUGIN_NAMECommand, in our case it’s HelloCommand.</p>
-
-<p>Our HelloCommand class looks like below:</p>
-
-<p>3. Binding with shortcut:</p>
-
-<p>To bind a plugin with shortcut open <strong>Key Bindings &#8211; User</strong> under preferences and add the below code:</p>
-
-<blockquote><p>{ &#8220;keys&#8221;: [&#8220;ctrl+shift+h&#8221;], &#8220;command&#8221;: &#8220;hello&#8221;}</p></blockquote>
-
-<ol>
-<li>Test the plugin:</li>
-</ol>
-
-
-<p>Open sublime debug window using <strong>Ctrl + `</strong> and test the plugin using <strong>Ctrl+Shift+h</strong>, if everything went well you should be seeing Hello World.</p>
-
-<p>Tip: If you are using Python version &lt; 3 use <strong>print &#8220;Hello World&#8221;</strong></p>
-</div>
-  
-  
-
-
-    </article>
   
   
     <article>
@@ -414,11 +355,11 @@
 
 <blockquote><p>name,email</p>
 
-<p>Bob,<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x62;&#x6f;&#x62;&#64;&#x65;&#120;&#x61;&#x6d;&#x70;&#108;&#x65;&#46;&#x63;&#111;&#109;">&#x62;&#111;&#98;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+<p>Bob,<a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#98;&#x6f;&#98;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">&#98;&#x6f;&#98;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;</a></p>
 
-<p>John,<a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x6a;&#111;&#104;&#110;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#106;&#111;&#x68;&#x6e;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>John,<a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#106;&#x6f;&#104;&#x6e;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;">&#x6a;&#x6f;&#x68;&#x6e;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a></p>
 
-<p>Michael,<a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#109;&#x69;&#99;&#x68;&#97;&#x65;&#x6c;&#x40;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#99;&#111;&#109;">&#109;&#105;&#99;&#x68;&#x61;&#101;&#x6c;&#64;&#x65;&#120;&#97;&#109;&#112;&#x6c;&#x65;&#x2e;&#x63;&#111;&#x6d;</a></p></blockquote>
+<p>Michael,<a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#109;&#x69;&#99;&#x68;&#x61;&#101;&#x6c;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#99;&#111;&#x6d;">&#109;&#x69;&#99;&#104;&#97;&#x65;&#108;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#99;&#111;&#x6d;</a></p></blockquote>
 
 <p>The above code will read csv from users.csv and write json output to users.json, here fieldnames variable is used to speficy csv headers which is used by <em>csv.DictReader</em> to map the data to their respective fields, later we use json.dump to convert the row into json.</p>
 
@@ -469,6 +410,44 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/disable-git-folder-access-apache/">Disable .git Folder Access in Apache</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:50:30+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Exposing .git folder access is not a good idea, you can redirect .git to 404 using .htaccess:</p>
+
+<blockquote><p>RedirectMatch 404 /.git</p></blockquote>
+
+<p>Resources:</p>
+
+<ul>
+<li> <a href="http://www.bestblog.co/tech/enable-htaccess-apache/">Enable htaccess in Apache</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
   <div class="pagination">
     
       <a class="prev" href="/posts/9">&larr; Older</a>
@@ -486,10 +465,6 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/title/">Metric Analytics &amp; Alerting</a>
-      </li>
-    
-      <li class="post">
         <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
       </li>
     
@@ -503,6 +478,10 @@
     
       <li class="post">
         <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/resize-image-in-linux/">How to Resize a Image in Linux</a>
       </li>
     
   </ul>
