@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Windows | BootDB]]></title>
+  <link href="http://www.bootdb.com/blog/categories/windows/atom.xml" rel="self"/>
+  <link href="http://www.bootdb.com/"/>
+  <updated>2017-01-10T19:08:55+05:30</updated>
+  <id>http://www.bootdb.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Open Port From Command Line in Windows Server]]></title>
+    <link href="http://www.bootdb.com/windows-server-open-port-command-line/"/>
+    <updated>2016-12-12T19:56:53+05:30</updated>
+    <id>http://www.bootdb.com/windows-server-open-port-command-line</id>
+    <content type="html"><![CDATA[<p>Use netsh to open port from Command line in Window server:</p>
+
+<pre><code>netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Import Azure Cdmlets Into Powershell]]></title>
+    <link href="http://www.bootdb.com/import-azure-cdmlets-powershell/"/>
+    <updated>2016-12-12T19:49:40+05:30</updated>
+    <id>http://www.bootdb.com/import-azure-cdmlets-powershell</id>
+    <content type="html"><![CDATA[<p>After installing Azure SDK by using Import-Module we can import azure cdmlets into Powershell like below:</p>
+
+<pre><code>Import-Module "C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\ServiceManagement\Azure"&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;&lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Allow ICMP Echo Request From the Command Line in Windows]]></title>
+    <link href="http://www.bootdb.com/allow-icmp-echo-request-command-line-windows/"/>
+    <updated>2016-12-12T19:45:25+05:30</updated>
+    <id>http://www.bootdb.com/allow-icmp-echo-request-command-line-windows</id>
+    <content type="html"><![CDATA[<p>Allow ICMP Echo Request (ping) From the Command Line:</p>
+
+<pre>&lt;cpde>netsh firewall set icmpsetting 8 enable&lt;/code></pre>
+
+
+<p>To disable it again, simply enter this command:</p>
+
+<pre><code>netsh firewall set icmpsetting 8 disable
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Read Process Output in Powershell]]></title>
+    <link href="http://www.bootdb.com/read-process-output-powershell/"/>
+    <updated>2016-12-12T19:43:39+05:30</updated>
+    <id>http://www.bootdb.com/read-process-output-powershell</id>
+    <content type="html"><![CDATA[<p>If you are running a process via powershell you can capture the stdout and stderr using <strong>StandardOutput.ReadToEnd()</strong> and <strong>StandardError.ReadToEnd()</strong>, below is the example:</p>
+
+<pre><code>$pinfo = New-Object System.Diagnostics.ProcessStartInfo
+$pinfo.FileName = "ping.exe"
+$pinfo.RedirectStandardError = $true
+$pinfo.RedirectStandardOutput = $true
+$pinfo.UseShellExecute = $false
+$pinfo.Arguments = "localhost"
+$p = New-Object System.Diagnostics.Process
+$p.StartInfo = $pinfo
+$p.Start() | Out-Null
+$p.WaitForExit()
+$stdout = $p.StandardOutput.ReadToEnd()
+$stderr = $p.StandardError.ReadToEnd()
+Write-Host "stdout: $stdout"
+Write-Host "stderr: $stderr"
+Write-Host "exit code: " + $p.ExitCode
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

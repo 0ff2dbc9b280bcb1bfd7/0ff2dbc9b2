@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="Scp stands for secure copy program which copies files between hosts on a network. It uses ssh for data transfer, and uses the same authentication and &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/posts/5/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/copy-file-from-remote-machine-to-local-using-scp-in-linux/">Copy File From Remote Machine to Local Using SCP in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-11-06T17:38:36+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:38 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Scp stands for secure copy program which copies files between hosts on a network. It uses ssh for data transfer, and uses the same authentication and provides the same security as ssh.</p>
+
+<p>copy remote file to local:</p>
+
+<pre><code>scp -r joe@127.20.20.20:/home/joe/file.csv ~/remote/joe/
+</code></pre>
+
+<p>This will copy remote&#8217;s <strong>file.csv</strong> to the local directory <strong>~/remote/joe</strong></p>
+
+<p>Also see: <a href="http://www.bestblog.co/tech/copy-file-from-local-machine-to-remote-using-scp-in-linux/">Copy File From Local Machine to Remote Using SCP in Linux</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/ffmpeg-i-i-vcodec-copy-acodec-copy-i-mp4/">Convert MKV Files to MP4 Using FFMPEG in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-11-06T17:33:34+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:33 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ffmpeg is a swiss army knife for video files, here&#8217;s how to convert mkv file to mp4:</p>
+
+<pre><code>ffmpeg -i my.mkv -vcodec copy -acodec copy my.mp4
+</code></pre>
+
+<p>If you have a set of mkv files in a directory, you can convert all of them to mp4 using below command:</p>
+
+<pre><code>for i in *mkv; do ffmpeg -i $i -vcodec copy -acodec copy $i.mp4; done
+</code></pre>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/tools-for-cross-browser-testing/">Tools for Cross-Browser Testing</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-11-06T17:27:13+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:27 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>With growing web, the browser in which where people view the webpage is for toss, for better user experience cross browser testing is hygiene for a website. Here are a few tools for testing a website for cross browser compatibility:</p>
+
+<p>1. Locally Installed Browsers:</p>
+
+<p>Have multiple browser installations in your local machine, here are the essentials browsers based on the market share:</p>
+
+<ol>
+<li>Google Chrome</li>
+<li>Firefox</li>
+<li>Safari</li>
+<li>IE</li>
+<li>Opera</li>
+</ol>
+
+
+<p>If you are not on Windows you can download IE vm directly from <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/">Microsoft</a></p>
+
+<p>2. Chrome&#8217;s mobile device emulator:</p>
+
+<p>Chrome supports device emulation, this can be enabled by clicking mobile icon on Chrome&#8217;s developer tools, or using Ctrl + Shift + M after opening developer tools, here you can choose multiple devices or add a new device.</p>
+
+<ol>
+<li><p>Use <a href="https://www.browserstack.com/">browserstack.com</a> for live browser testing (PAID)</p></li>
+<li><p>Use <a href="http://browsershots.org/">browsershots.org</a> for screenshots of your web page in different operating systems and browsers. (FREE)</p></li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/locating-nginx-root-directory-in-linux/">Locating Nginx Root Directory in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-11-06T17:14:27+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>6</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>5:14 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When installed Nginx, we often get confused about the root dir location of Nginx, as supposed to Apache, which installs the root at <strong>/var/www</strong>, here&#8217;s how to locate root directory of Nginx in Linux:</p>
+
+<ol>
+<li>Go to: <strong>/etc/nginx/sites-enabled</strong></li>
+<li>Run: <strong>cat default</strong></li>
+<li>Locate root property and the value of the directory where Nginx is serving from</li>
+</ol>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/enable-write-permissions-to-a-directory-in-linux/">How to Enable Write Permissions to a Directory in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-11-01T08:33:11+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>1</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>8:33 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><pre><code>sudo chmod -R o+w ./dir
+</code></pre>
+
+<p>The above command will give write access to a a folder (in our example <em>dir</em> folder). For better understanding read &#8211; <a href="http://unix.stackexchange.com/questions/183994/understanding-unix-permissions-and-their-attributes">Understanding UNIX permissions and their attributes</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/enable-code-highlighting-using-highlight-js/">Enable Code Highlighting Using HighlightJS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-30T10:46:15+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:46 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>HighlightJS is the simplest way to enable syntax highlighting on the web, I&#8217;v tried <a href="https://github.com/google/code-prettify">Google code prettify</a>, but found it a little more complex than highlight js. You will be able to get highlight js up and running in 4 simple steps:</p>
+
+<p><strong>Step 1: Download:</strong></p>
+
+<p>Go to <a href="https://highlightjs.org/download/">highlightjs.org/download</a> to download the library, I recommend to customize the download by selecting the languages you use, instead of the whole library.</p>
+
+<p><strong>Step 2: Import:</strong></p>
+
+<p>Once you download the library (I&#8217;m using a customized version), you should be having two important things, 1 the <strong>highlight.pack.js</strong> file and 2 the <strong>styles</strong> folder. Styles folder have multiple styles (themes) that you can choose from, I&#8217;m using github-gist style, which is very similar to the <a href="http://gist.github.com/">gist.github.com</a>. Now import style and js into html:</p>
+
+<pre>&lt;link rel="stylesheet" type="text/css" href="github-gist.css"&gt;
+&lt;script src="highlight.pack.js"&gt;&lt;/script&gt;
+</pre>
+
+
+<p><strong>Step 3: Add code:</strong></p>
+
+<p>Let&#8217;s add some code to the web page so that highlight js could highlight it, consider the below example:</p>
+
+<pre>&lt;pre&gt;&lt;code&gt;function sayHello(){
+    console.log("Hello!");
+}
+sayHello();&lt;/code&gt;&lt;/pre&gt;
+</pre>
+
+
+<p><strong>Step 4: Init HighlightJS:</strong></p>
+
+<p>Now, call the highlight JS init function by running:</p>
+
+<pre>hljs.initHighlightingOnLoad();
+</pre>
+
+
+<p>The webpage should like below:</p>
+
+<p><img src="http://i.imgur.com/C6uLpKj.png" alt="" /></p>
+
+<p>Here is the complete HTML page which I used:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/redirect-site-using-apache/">Redirect a Site Using Apache</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:28:04+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:28 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Using apache we can easily redirect a site to another site preserving the end url, that means:</p>
+
+<p>Redirecting: <em>bestblog.co/hello-world</em> <strong>to</strong> <em>www.bestblog.co/hello-world</em></p>
+
+<p><strong>Add redirect code to config:</strong></p>
+
+<p>Go to Apache enabled sites: <code>cd /etc/apache2/sites-enabled</code>, edit your config like below:</p>
+
+<pre>&lt;VirtualHost *&gt;
+  ServerName example.com
+  Redirect 301 / http://www.example.com/
+&lt;/VirtualHost&gt;
+</pre>
+
+
+<p>This will redirect example.com to www.example.com</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/how-to-validate-elasticsearch-connection-using-java-api/">How to Validate ElasticSearch Connection Using Java API</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:18:05+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:18 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When a connection is made to ElasticSearch from Java API the client does not throw an exception if the connection got failed, rather the exception is thrown while performing CURD operations. If you however want to be sure if the connection is made before hand, use the following code snippet:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/how-to-validate-spring-requestbody/">How to Validate Spring RequestBody</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:16:55+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:16 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When working to post request’s using Spring framework, we often need validation, consider the below snippet:</p>
+
+<pre>@RequestMapping(value = "/user/search", method = RequestMethod.POST, produces = "application/json")
+public String search(@RequestBody SearchUserRequest searchUserRequest) {
+  // ... some code
+}
+</pre>
+
+
+<p>In this code if you are required to validate <code>SearchUserRequest</code>, you might do this using code like this:</p>
+
+<p>&nbsp;</p>
+
+<pre>if(searchUserRequest.getUserEmail() != null || searchUserRequest.getUserName()!= null ...etc)
+</pre>
+
+
+<p>But this not what we are looking for if we have classes with quite some number of properties, instead we can make use of JavaX validation annotation <a href="http://docs.oracle.com/javaee/7/api/javax/validation/Valid.html">@Valid</a>, let’s rewrite the above code with @Valid annotation:</p>
+
+<pre>@RequestMapping(value = "/user/search", method = RequestMethod.POST, produces = "application/json")
+public String search(@Valid @RequestBody SearchUserRequest searchUserRequest) {
+  // ... some code
+}
+</pre>
+
+
+<p>Along with this we are required to mention what all properties in the <em>SearchUserRequest</em> class are required, we do this my using <a href="http://docs.oracle.com/javaee/6/api/javax/validation/constraints/package-summary.html">JavaX constraints</a>.</p>
+
+<pre>public class SearchUserRequest{
+  @NotNull
+  private String name;
+
+  @NotNull
+  private String email;
+
+  ....
+}
+</pre>
+
+
+<p>This will make sure that request has name and email set. Tip: <em>@NotNull</em> annotation will not consider empty strings, if you want to validate empty strings as well use, <em>@NotBlank</em> annotation from <a href="http://hibernate.org/validator/">Hibernate validator</a></p>
+
+<div class="entry-content">
+  <p>
+    <strong>Resources:</strong>
+  </p>
+  
+  <ul>
+    <li>
+      <a href="http://docs.oracle.com/javaee/6/api/javax/validation/constraints/package-summary.html">JavaX constraints</a>
+    </li>
+    <li>
+      <a href="http://hibernate.org/validator/">Hibernate validator</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/how-to-backup-your-bitbucket-repositories/">How to Backup Your BitBucket Repositories</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:14:39+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:14 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In BitBucket you may have public and private repos, BitBucket provides <a href="https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories">repositories API</a> from which we can read all the repositories a user has and write code to clone all these, let’s see how.</p>
+
+<p><strong>Step 1: Generate authorization key</strong></p>
+
+<p>Private repositories of your account are not visible using this api without authorization, hence we need to generate authorization key, open python and run this code:</p>
+
+<p>This will print the authorization key, which we will use in next step.</p>
+
+<p><strong>Step 2: Run the backup script:</strong></p>
+
+<p>Replace <strong><TOKEN></strong> with the token obtained from step 1 and run the script using <em>node backup.js > backup.sh</em>, this will output <em>git clone</em> commands, and later run the generated sh file, which clones all the repositories.</p>
+
+<p>References:</p>
+
+<ul>
+<li><a href="https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories">BitBucket Repositories API</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/6">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/4">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

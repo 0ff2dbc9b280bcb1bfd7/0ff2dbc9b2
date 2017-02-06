@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Databases | BootDB]]></title>
+  <link href="http://www.bootdb.com/blog/categories/databases/atom.xml" rel="self"/>
+  <link href="http://www.bootdb.com/"/>
+  <updated>2017-01-10T19:08:55+05:30</updated>
+  <id>http://www.bootdb.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql Meta Commands Cheat Sheet]]></title>
+    <link href="http://www.bootdb.com/mysql-meta-commands-cheat-sheet/"/>
+    <updated>2016-12-12T19:59:49+05:30</updated>
+    <id>http://www.bootdb.com/mysql-meta-commands-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>Create New User:</p>
+
+<pre><code>CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'newuser'@'%' IDENTIFIED BY 'password';&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+Grant Privileges:
+
+
+    GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT CREATE ON * . * TO 'newuser'@'localhost';
+    GRANT DROP PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT DELETE PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT INSERT PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT SELECT PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT UPDATE PRIVILEGES ON * . * TO 'newuser'@'localhost';&lt;/pre&gt;
+    &lt;p&gt;&lt;/p&gt;
+
+
+    Revoke:
+
+
+        REVOKE [type of permission] ON [database name].[table name] FROM ‘[username]’@‘localhost’;&lt;/pre&gt;
+        &lt;p&gt;&lt;/p&gt;
+
+
+        Flush:
+
+
+            FLUSH PRIVILEGES;&lt;/pre&gt;
+            &lt;p&gt;&lt;/p&gt;
+
+
+            Drop user:
+
+
+                DROP USER ‘demo’@‘localhost’;&lt;/pre&gt;
+                &lt;p&gt;&lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

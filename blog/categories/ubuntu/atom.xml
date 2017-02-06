@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ubuntu | BootDB]]></title>
+  <link href="http://www.bootdb.com/blog/categories/ubuntu/atom.xml" rel="self"/>
+  <link href="http://www.bootdb.com/"/>
+  <updated>2017-01-10T19:08:55+05:30</updated>
+  <id>http://www.bootdb.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Format a Drive in Linux]]></title>
+    <link href="http://www.bootdb.com/format-drive-linux/"/>
+    <updated>2016-12-12T19:47:42+05:30</updated>
+    <id>http://www.bootdb.com/format-drive-linux</id>
+    <content type="html"><![CDATA[<p>To format a drive in Linux use:</p>
+
+<pre><code># Choose which volume you want to format:
+fdisk -l
+
+# Unmount the volume:
+umount /dev/sdb1
+
+# Format it:
+mkfs.vfat /dev/sdb1&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Convert CR2 to JPG in Ubuntu]]></title>
+    <link href="http://www.bootdb.com/convert-cr2-to-jpg-ubuntu/"/>
+    <updated>2016-12-12T19:41:01+05:30</updated>
+    <id>http://www.bootdb.com/convert-cr2-to-jpg-ubuntu</id>
+    <content type="html"><![CDATA[<p>Convert cr2 to jpeg files in Ubuntu in a few simple steps:</p>
+
+<p><strong>Step 1: Install ufraw</strong></p>
+
+<pre><code>sudo apt-get install ufraw
+</code></pre>
+
+<p><strong>Step 2: For ufraw</strong></p>
+
+<pre><code>for i in *.CR2; do ufraw-batch $i --out-type=jpeg --output $i.jpg; done;
+</code></pre>
+
+<p>This will convert all cr2 files a directory into jpeg files, later if you don&#8217;t want cr2 files use <strong>rm -f *.cr2</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Install Mac Theme in Ubuntu]]></title>
+    <link href="http://www.bootdb.com/install-mac-theme-ubuntu/"/>
+    <updated>2016-12-12T19:38:11+05:30</updated>
+    <id>http://www.bootdb.com/install-mac-theme-ubuntu</id>
+    <content type="html"><![CDATA[<p>Make your Ubuntu look like a Mac by installing mac theme:</p>
+
+<pre><code>sudo add-apt-repository ppa:noobslab/themes
+sudo apt-get update
+sudo apt-get install mac-ithemes-v3
+sudo apt-get install mac-icons-v3
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Install Debian .deb File in Ubuntu]]></title>
+    <link href="http://www.bootdb.com/install-debian-deb-file-ubuntu/"/>
+    <updated>2016-12-10T13:40:18+05:30</updated>
+    <id>http://www.bootdb.com/install-debian-deb-file-ubuntu</id>
+    <content type="html"><![CDATA[<p>Debian (.deb) packages are the packages that are used in Ubuntu. You can install any .deb package in your system. .deb files can generally be installed from your file manager (Nautilus) merely by clicking on them, since file associations with the default installer is already set in Ubuntu. These instructions are for those who wish to install packages from the command-line terminal (Terminal).</p>
+
+<p>To install a downloaded Debian package (.deb): Open Terminal and type</p>
+
+<pre><code>sudo dpkg -i packagename.deb
+</code></pre>
+
+<p>To remove a Debian (Ubuntu) package (.deb):</p>
+
+<pre><code>sudo dpkg -r packagename
+</code></pre>
+
+<p>To Reconfigure/Repair an installed Debian (Ubuntu) package (.deb):</p>
+
+<pre><code>sudo dpkg-reconfigure packagename
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[List All Installed Packages in Ubuntu]]></title>
+    <link href="http://www.bootdb.com/list-installed-packages-ubuntu/"/>
+    <updated>2016-12-10T13:18:32+05:30</updated>
+    <id>http://www.bootdb.com/list-installed-packages-ubuntu</id>
+    <content type="html"><![CDATA[<p>Use below command to list all the installed packages:</p>
+
+<pre><code>dpkg -l
+</code></pre>
+
+<p>To search through them, for example say want to search php packages use:</p>
+
+<pre><code>dpkg -l "*php*"
+# OR
+dpkg -l | grep php
+</code></pre>
+
+<p>On Ubuntu 14.04 and above you can use the apt tool itself:</p>
+
+<pre><code>apt list --installed&lt;/pre&gt;
+&lt;p&gt;  
+&amp;nbsp;&lt;/p&gt;
+
+
+&amp;nbsp;
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

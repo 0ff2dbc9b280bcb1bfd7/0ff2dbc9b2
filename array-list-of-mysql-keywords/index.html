@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Array List of MySQL Keywords - BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="All 612 MySQL keywords and reserved words have been listed at dev.mysql.com/doc/refman/5.5/en/keywords.html, however I you would like to use those in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/array-list-of-mysql-keywords/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Array List of MySQL Keywords</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-11-15T14:53:21+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:53 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>All 612 MySQL keywords and reserved words have been listed at <a href="https://dev.mysql.com/doc/refman/5.5/en/keywords.html">dev.mysql.com/doc/refman/5.5/en/keywords.html</a>, however I you would like to use those in programming languages it should be converted into an array, I&#8217;ve written a simple script to convert the table into array list.</p>
+
+<pre><code>var elements = $("code.literal");
+var keywords = [];
+for(var i=0;i&lt;elements.length;i++){
+    keywords.push(elements[i].innerHTML);
+}
+console.log(JSON.stringify(keywords));
+</code></pre>
+
+<p>This is the generated array from above script:</p>
+
+<pre><code>["SELECT","DELETE","BIGINT","BEGIN","END","INTERVAL","COUNT","_FILENAME","GROUP","ACCESSIBLE","ACTION","ADD","AFTER","AGAINST","AGGREGATE","ALGORITHM","ALL","ALTER","ANALYZE","AND","ANY","AS","ASC","ASCII","ASENSITIVE","AT","AUTHORS","AUTOEXTEND_SIZE","AUTO_INCREMENT","AVG","AVG_ROW_LENGTH","BACKUP","BEFORE","BEGIN","BETWEEN","BIGINT","BINARY","BINLOG","BIT","BLOB","BLOCK","BOOL","BOOLEAN","BOTH","BTREE","BY","BYTE","CACHE","CALL","CASCADE","CASCADED","CASE","CATALOG_NAME","CHAIN","CHANGE","CHANGED","CHAR","CHARACTER","CHARSET","CHECK","CHECKSUM","CIPHER","CLASS_ORIGIN","CLIENT","CLOSE","COALESCE","CODE","COLLATE","COLLATION","COLUMN","COLUMNS","COLUMN_NAME","COMMENT","COMMIT","COMMITTED","COMPACT","COMPLETION","COMPRESSED","CONCURRENT","CONDITION","CONNECTION","CONSISTENT","CONSTRAINT","CONSTRAINT_CATALOG","CONSTRAINT_NAME","CONSTRAINT_SCHEMA","CONTAINS","CONTEXT","CONTINUE","CONTRIBUTORS","CONVERT","CPU","CREATE","CROSS","CUBE","CURRENT_DATE","CURRENT_TIME","CURRENT_TIMESTAMP","CURRENT_USER","CURSOR","CURSOR_NAME","DATA","DATABASE","DATABASES","DATAFILE","DATE","DATETIME","DAY","DAY_HOUR","DAY_MICROSECOND","DAY_MINUTE","DAY_SECOND","DEALLOCATE","DEC","DECIMAL","DECLARE","DEFAULT","DEFINER","DELAYED","DELAY_KEY_WRITE","DELETE","DESC","DESCRIBE","DES_KEY_FILE","DETERMINISTIC","DIRECTORY","DISABLE","DISCARD","DISK","DISTINCT","DISTINCTROW","DIV","DO","DOUBLE","DROP","DUAL","DUMPFILE","DUPLICATE","DYNAMIC","EACH","ELSE","ELSEIF","ENABLE","ENCLOSED","END","ENDS","ENGINE","ENGINES","ENUM","ERROR","ERRORS","ESCAPE","ESCAPED","EVENT","EVENTS","EVERY","EXECUTE","EXISTS","EXIT","EXPANSION","EXPLAIN","EXTENDED","EXTENT_SIZE","FALSE","FAST","FAULTS","FETCH","FIELDS","FILE","FIRST","FIXED","FLOAT","FLOAT4","FLOAT8","FLUSH","FOR","FORCE","FOREIGN","FOUND","FRAC_SECOND","FROM","FULL","FULLTEXT","FUNCTION","GENERAL","GEOMETRY","GEOMETRYCOLLECTION","GET_FORMAT","GLOBAL","GRANT","GRANTS","GROUP","HANDLER","HASH","HAVING","HELP","HIGH_PRIORITY","HOST","HOSTS","HOUR","HOUR_MICROSECOND","HOUR_MINUTE","HOUR_SECOND","IDENTIFIED","IF","IGNORE","IGNORE_SERVER_IDS","IMPORT","IN","INDEX","INDEXES","INFILE","INITIAL_SIZE","INNER","INNOBASE","INNODB","INOUT","INSENSITIVE","INSERT","INSERT_METHOD","INSTALL","INT","INT1","INT2","INT3","INT4","INT8","INTEGER","INTERVAL","INTO","INVOKER","IO","IO_THREAD","IPC","IS","ISOLATION","ISSUER","ITERATE","JOIN","KEY","KEYS","KEY_BLOCK_SIZE","KILL","LANGUAGE","LAST","LEADING","LEAVE","LEAVES","LEFT","LESS","LEVEL","LIKE","LIMIT","LINEAR","LINES","LINESTRING","LIST","LOAD","LOCAL","LOCALTIME","LOCALTIMESTAMP","LOCK","LOCKS","LOGFILE","LOGS","LONG","LONGBLOB","LONGTEXT","LOOP","LOW_PRIORITY","MASTER","MASTER_CONNECT_RETRY","MASTER_HEARTBEAT_PERIOD","MASTER_HOST","MASTER_LOG_FILE","MASTER_LOG_POS","MASTER_PASSWORD","MASTER_PORT","MASTER_SERVER_ID","MASTER_SSL","MASTER_SSL_CA","MASTER_SSL_CAPATH","MASTER_SSL_CERT","MASTER_SSL_CIPHER","MASTER_SSL_KEY","MASTER_SSL_VERIFY_SERVER_CERT","MASTER_USER","MATCH","MAXVALUE","MAX_CONNECTIONS_PER_HOUR","MAX_QUERIES_PER_HOUR","MAX_ROWS","MAX_SIZE","MAX_UPDATES_PER_HOUR","MAX_USER_CONNECTIONS","MEDIUM","MEDIUMBLOB","MEDIUMINT","MEDIUMTEXT","MEMORY","MERGE","MESSAGE_TEXT","MICROSECOND","MIDDLEINT","MIGRATE","MINUTE","MINUTE_MICROSECOND","MINUTE_SECOND","MIN_ROWS","MOD","MODE","MODIFIES","MODIFY","MONTH","MULTILINESTRING","MULTIPOINT","MULTIPOLYGON","MUTEX","MYSQL_ERRNO","NAME","NAMES","NATIONAL","NATURAL","NCHAR","NDB","NDBCLUSTER","NEW","NEXT","NO","NODEGROUP","NONE","NOT","NO_WAIT","NO_WRITE_TO_BINLOG","NULL","NUMERIC","NVARCHAR","OFFSET","OLD_PASSWORD","ON","ONE","ONE_SHOT","OPEN","OPTIMIZE","OPTION","OPTIONALLY","OPTIONS","OR","ORDER","OUT","OUTER","OUTFILE","OWNER","PACK_KEYS","PAGE","PARSER","PARTIAL","PARTITION","PARTITIONING","PARTITIONS","PASSWORD","PHASE","PLUGIN","PLUGINS","POINT","POLYGON","PORT","PRECISION","PREPARE","PRESERVE","PREV","PRIMARY","PRIVILEGES","PROCEDURE","PROCESSLIST","PROFILE","PROFILES","PROXY","PURGE","QUARTER","QUERY","QUICK","RANGE","READ","READS","READ_ONLY","READ_WRITE","REAL","REBUILD","RECOVER","REDOFILE","REDO_BUFFER_SIZE","REDUNDANT","REFERENCES","REGEXP","RELAY","RELAYLOG","RELAY_LOG_FILE","RELAY_LOG_POS","RELAY_THREAD","RELEASE","RELOAD","REMOVE","RENAME","REORGANIZE","REPAIR","REPEAT","REPEATABLE","REPLACE","REPLICATION","REQUIRE","RESET","RESIGNAL","RESTORE","RESTRICT","RESUME","RETURN","RETURNS","REVOKE","RIGHT","RLIKE","ROLLBACK","ROLLUP","ROUTINE","ROW","ROWS","ROW_FORMAT","RTREE","SAVEPOINT","SCHEDULE","SCHEMA","SCHEMAS","SCHEMA_NAME","SECOND","SECOND_MICROSECOND","SECURITY","SELECT","SENSITIVE","SEPARATOR","SERIAL","SERIALIZABLE","SERVER","SESSION","SET","SHARE","SHOW","SHUTDOWN","SIGNAL","SIGNED","SIMPLE","SLAVE","SLOW","SMALLINT","SNAPSHOT","SOCKET","SOME","SONAME","SOUNDS","SOURCE","SPATIAL","SPECIFIC","SQL","SQLEXCEPTION","SQLSTATE","SQLWARNING","SQL_BIG_RESULT","SQL_BUFFER_RESULT","SQL_CACHE","SQL_CALC_FOUND_ROWS","SQL_NO_CACHE","SQL_SMALL_RESULT","SQL_THREAD","SQL_TSI_DAY","SQL_TSI_FRAC_SECOND","SQL_TSI_HOUR","SQL_TSI_MINUTE","SQL_TSI_MONTH","SQL_TSI_QUARTER","SQL_TSI_SECOND","SQL_TSI_WEEK","SQL_TSI_YEAR","SSL","START","STARTING","STARTS","STATUS","STOP","STORAGE","STRAIGHT_JOIN","STRING","SUBCLASS_ORIGIN","SUBJECT","SUBPARTITION","SUBPARTITIONS","SUPER","SUSPEND","SWAPS","SWITCHES","TABLE","TABLES","TABLESPACE","TABLE_CHECKSUM","TABLE_NAME","TEMPORARY","TEMPTABLE","TERMINATED","TEXT","THAN","THEN","TIME","TIMESTAMP","TIMESTAMPADD","TIMESTAMPDIFF","TINYBLOB","TINYINT","TINYTEXT","TO","TRAILING","TRANSACTION","TRIGGER","TRIGGERS","TRUE","TRUNCATE","TYPE","TYPES","UNCOMMITTED","UNDEFINED","UNDO","UNDOFILE","UNDO_BUFFER_SIZE","UNICODE","UNINSTALL","UNION","UNIQUE","UNKNOWN","UNLOCK","UNSIGNED","UNTIL","UPDATE","UPGRADE","USAGE","USE","USER","USER_RESOURCES","USE_FRM","USING","UTC_DATE","UTC_TIME","UTC_TIMESTAMP","VALUE","VALUES","VARBINARY","VARCHAR","VARCHARACTER","VARIABLES","VARYING","VIEW","WAIT","WARNINGS","WEEK","WHEN","WHERE","WHILE","WITH","WORK","WRAPPER","WRITE","X509","XA","XML","XOR","YEAR","YEAR_MONTH","ZEROFILL","ERROR","FRAC_SECOND","GENERAL","IGNORE_SERVER_IDS","INNOBASE","INNODB","MASTER_HEARTBEAT_PERIOD","PROXY","RELAY","SLOW","SQL_TSI_FRAC_SECOND","CATALOG_NAME","CLASS_ORIGIN","COLUMN_NAME","CONSTRAINT_CATALOG","CONSTRAINT_NAME","CONSTRAINT_SCHEMA","CURSOR_NAME","ERROR","GENERAL","IGNORE_SERVER_IDS","MASTER_HEARTBEAT_PERIOD","MESSAGE_TEXT","MYSQL_ERRNO","PROXY","RELAY","RELAYLOG","RESIGNAL","SCHEMA_NAME","SIGNAL","SLOW","SUBCLASS_ORIGIN","TABLE_NAME","XML","FRAC_SECOND","INNOBASE","INNODB","SQL_TSI_FRAC_SECOND"]
+</code></pre>
+
+<p>&nbsp;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">editor</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-11-15T14:53:21+05:30'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:53 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/tech/'>tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.bootdb.com/array-list-of-mysql-keywords/" data-via="" data-counturl="http://www.bootdb.com/array-list-of-mysql-keywords/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/parse-csv-into-json-in-node-js/" title="Previous Post: Parse CSV into JSON in Node.JS">&laquo; Parse CSV into JSON in Node.JS</a>
+      
+      
+        <a class="basic-alignment right" href="/disable-horizontal-scroll-ubuntu/" title="Next Post: Disable Horizontal Scroll In Ubuntu">Disable Horizontal Scroll In Ubuntu &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

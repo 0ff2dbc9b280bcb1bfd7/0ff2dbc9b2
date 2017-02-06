@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Networking | BootDB]]></title>
+  <link href="http://www.bootdb.com/blog/categories/networking/atom.xml" rel="self"/>
+  <link href="http://www.bootdb.com/"/>
+  <updated>2017-01-10T19:08:55+05:30</updated>
+  <id>http://www.bootdb.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Get List of DNS Servers Linux Is Using]]></title>
+    <link href="http://www.bootdb.com/get-list-dns-servers-linux-is-using/"/>
+    <updated>2016-12-19T13:11:22+05:30</updated>
+    <id>http://www.bootdb.com/get-list-dns-servers-linux-is-using</id>
+    <content type="html"><![CDATA[<p>To get the list of DNS server which Linux is currently referring to use:</p>
+
+<pre><code>nmcli dev list | grep DNS
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>

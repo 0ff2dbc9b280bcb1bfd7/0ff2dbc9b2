@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="Merge two or more PDF pages into a single page, install pdfjam in Ubuntu use sudo apt-get install texlive-extra-utils, then run, pdfjam input.pdf &# &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/posts/7/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/merge-multiple-pdf-pages-one-page-linux/">Merge Multiple PDF Pages Into One Page in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:46:46+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:46 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Merge two or more PDF pages into a single page, install <code>pdfjam</code> in Ubuntu use <code>sudo apt-get install texlive-extra-utils</code>, then run,</p>
+
+<blockquote><p>pdfjam input.pdf &#8211;nup 2&#215;1 &#8211;landscape &#8211;outfile output.pdf</p></blockquote>
+
+<ul>
+<li>input.pdf: File to be merged</li>
+<li><code>--nup 2x1</code>: This denotes to merge 2 pages into a single page, to merge 4 pages into a single page use <code>4x1</code></li>
+<li><code>--landscape</code>: This will merge pages into landscape mode, this is recommended but optional</li>
+<li>output.pdf: Output file (Generated file after the merge)</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/extract-selected-pages-from-pdf-in-linux/">Extract Selected Pages From PDF in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:46:00+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:46 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>pdfjam is a handy tool to extract selected pages from a PDF. Install <code>pdfjam</code>, in Ubuntu use <code>sudo apt-get install texlive-extra-utils</code>, run:</p>
+
+<blockquote><p>pdfjam <input file> <page ranges> -o <output file></p></blockquote>
+
+<p>An example of page ranges would be: <code>{},3,67-70,80</code> ({} for insert an additional empty page)</p>
+
+<p><strong>Example:</strong></p>
+
+<blockquote><p>pdfjam input.pdf <span class="o">{}</span>,101,103-106,<span class="o">{}</span> -o output.pdf</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/linux-process-management-cheat-sheet/">Linux Process Management Cheat Sheet</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:44:40+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:44 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><table>
+<thead>
+<tr>
+<th> Use                                           </th>
+<th> Command                                            </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Information and usage of process              </td>
+<td> htop                                               </td>
+</tr>
+<tr>
+<td> Get list of processes                         </td>
+<td> ps -A / ps -A                                      </td>
+</tr>
+<tr>
+<td> Get tree of processes                         </td>
+<td> pstree                                             </td>
+</tr>
+<tr>
+<td> Kill a process                                </td>
+<td> kill PID                                           </td>
+</tr>
+<tr>
+<td> Search a process                              </td>
+<td> pgrep ssh                                          </td>
+</tr>
+<tr>
+<td> Delete all process matching a search          </td>
+<td> kill $(pgrep ssh)                                  </td>
+</tr>
+<tr>
+<td> Kill a process with specific name             </td>
+<td> pkill firefox                                      </td>
+</tr>
+<tr>
+<td> Change the priority of a process              </td>
+<td> renice PRIORITY PID ( -19 High, 19 Low, 0 Default) </td>
+</tr>
+<tr>
+<td> Run command in the background and hide output </td>
+<td> (./studio.sh &amp;> /dev/null) &amp;                       </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/run-background-command-and-hide-output-in-linux/">Run Background Command and Hide Output in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:43:41+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:43 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><blockquote><p>(./script.sh &amp;> /dev/null) &amp;</p></blockquote>
+
+<ul>
+<li><strong>./script.sh</strong>: Select a script to run</li>
+<li><strong>&amp;> /dev/null</strong>: Write to null device</li>
+<li><strong>&amp;</strong>: Run the script in the background</li>
+</ul>
+
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/generate-sitemap-xml-in-jekyll-without-a-plugin/">Generate sitemap.xml in Jekyll Without a Plugin</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:42:04+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:42 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Jekyll provides <a href="https://github.com/jekyll/jekyll-sitemap">jekyll-sitemap</a> plugin to generate <code>sitemap.xml</code>, but here is a way to generate <code>sitemap.xml</code> without a plugin, create a file <code>sitemap.xml</code> in root folder of the jekyll with the below content:</p>
+
+<p>When you build your jekyll site, sitemap.xml will be accessible. However in Jekyll every file which is not a post is considered to be a page hence when using <code>for page in site.pages</code> at some instance of page you will have <code>.css</code> files as well, this is something which we are not looking to be in added to sitemap.xml file. To ignore certain files we shall create a explicit property which when set in a file will be ignored in sitemap.xml:</p>
+
+<blockquote><p>&#8212;</p>
+
+<p>sitemap:</p>
+
+<p>exclude: yes</p>
+
+<p>&#8212;</p></blockquote>
+
+<p>Add the above config into any file which need to be excluded from sitemap.xml, example <code>main.scss</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/cancel-angularjs-timeout/">Cancel AngularJS Timeout</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:40:32+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:40 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>AngularJS <code>$timeout</code> exposes <code>cancel([promise]);</code> API which is equivalent to JavaScript’s <code>clearTimeout(timeoutID)</code>, when AngularJS <code>$timeout</code> is called it returns a promise which is passed to cancel function if it need to be aborted before execution. Let’s see an example:</p>
+
+<p>The output of this code will be <code>Tick</code> (Only once) as the second timeout is cancelled.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/exclude-a-folder-in-linux-while-using-zip-command/">Exclude a Folder in Linux While Using Zip Command</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:10:30+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:10 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>While compressing you might want to exclude a certain folder while including everything else, below is a example how to exclude <code>.git</code> folder and zip everything else, you can remane <code>.git</code>with any folder or filename.</p>
+
+<blockquote><p>zip -9 -r &#8211;exclude=&#8217;*.git*&#8217; lg.zip ./</p></blockquote>
+
+<p>Multiple files / folders can be excluded using multiple <code>--exclude</code> flags, for example if you want to exclude <code>.git</code> and <code>.git-backup</code> use:</p>
+
+<blockquote><p>zip -9 -r &#8211;exclude=&#8217;*.git*&#8217; &#8211;exlude=&#8217;*.git-backup*&#8217; lg.zip ./</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/shell-commands-in-rakefile/">Shell Commands in Rakefile</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:08:34+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:08 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Rake provides a builtin function <strong>sh</strong> which allows use to run shell commands, example:</p>
+
+<p>Read more about Rakefile <code>sh</code> command at: <a href="http://www.rubydoc.info/gems/rake/FileUtils#sh-instance_method">www.rubydoc.info/gems/rake/FileUtils#sh-instance_method</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/remove-script-tags-from-html-files/">Remove Script Tags From HTML Files</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:06:32+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:06 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The below script will remove all script tags from HTML files and creates a <strong>&lt;FILE_NAME.html>.bak</strong> file (where <strong>&lt;FILE_NAME.html></strong> is actual file name) which have the actual content while the actual file is replaced with content removing script tag.</p>
+
+<blockquote><p><span class="n">perl</span> <span class="o">&#8211;</span><span class="n">i</span><span class="o">.</span><span class="n">bak</span> <span class="o">&#8211;</span><span class="mo">0777</span><span class="ow">ne</span> <span class="s">&#8216;s|&lt;script.<em>?</script>||gms;print&#8217;</span> <span class="o"></em>.</span><span class="n">html</span></p></blockquote>
+
+<p><strong>Disable backup (.bak files):</strong></p>
+
+<blockquote><p>perl -i -0777ne &#8216;s|&lt;script.*?</script>||gms;print&#8217; *.html</p></blockquote>
+
+<p><strong>Ignore file creation, just print the result:</strong></p>
+
+<blockquote><p>perl -0777ne &#8216;s|&lt;script.*?</script>||gms;print&#8217; *.html</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/git-replace-local-version-with-remote-version/">Git Replace Local Version With Remote Version</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:04:15+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:04 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>git pull</strong> is the primary command while acquiring the remote changes, under the hood this is same as running <strong>git fetch</strong> and <strong>git merge</strong> but this won’t help when you are sure to replace the local content with remote while conflicts.</p>
+
+<p>Using the below set of commands to hard reset local version with remote:</p>
+
+<blockquote><p>git fetch origin</p>
+
+<p>git reset &#8211;hard origin/master</p></blockquote>
+
+<p>Explanation:</p>
+
+<ul>
+<li>git fetch &#8211; This will imports commits from a remote repository into your local repo.</li>
+<li>git reset &#8211;hard origin/master &#8211; This will reset Reset current HEAD to the specified state, Hard is to ignore any changes in your local copy.</li>
+</ul>
+
+
+<p><strong>Tip:</strong></p>
+
+<p>Make a alias git-replace: **alias git-replace=&#8221;git fetch origin &amp;&amp; git reset &#8211;hard origin/master&#8221;**</p>
+
+<p>Read more about: <a href="https://git-scm.com/docs/git-reset">git reset</a>, <a href="https://git-scm.com/docs/git-pull">git pull</a>, <a href="https://git-scm.com/docs/git-fetch">git fetch</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/8">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/6">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

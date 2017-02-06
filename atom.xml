@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[BootDB]]></title>
+  <link href="http://www.bootdb.com/atom.xml" rel="self"/>
+  <link href="http://www.bootdb.com/"/>
+  <updated>2017-01-10T19:08:55+05:30</updated>
+  <id>http://www.bootdb.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Metric Analytics &amp; Alerting]]></title>
+    <link href="http://www.bootdb.com/title/"/>
+    <updated>2017-01-10T19:08:46+05:30</updated>
+    <id>http://www.bootdb.com/metric-analytics-and-alerting</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Floating Point Precision in JavaScript]]></title>
+    <link href="http://www.bootdb.com/floating-point-precision-javascript/"/>
+    <updated>2016-12-27T11:42:05+05:30</updated>
+    <id>http://www.bootdb.com/floating-point-precision-javascript</id>
+    <content type="html"><![CDATA[<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Number/toPrecision">toPrecision</a> is a JavaScript built-in function which can be used to set precision of a floating number, example usage:</p>
+
+<pre><code>var number = 123.456789;
+number.toPrecision(5); // returns string: '123.46'
+</code></pre>
+
+<p>To convert string to number use:</p>
+
+<pre><code>Number(number.toPrecision(5));
+</code></pre>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Get List of DNS Servers Linux Is Using]]></title>
+    <link href="http://www.bootdb.com/get-list-dns-servers-linux-is-using/"/>
+    <updated>2016-12-19T13:11:22+05:30</updated>
+    <id>http://www.bootdb.com/get-list-dns-servers-linux-is-using</id>
+    <content type="html"><![CDATA[<p>To get the list of DNS server which Linux is currently referring to use:</p>
+
+<pre><code>nmcli dev list | grep DNS
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Get List of Files Inside a Tar Archive in Linux]]></title>
+    <link href="http://www.bootdb.com/get-list-files-inside-tar-archive-linux/"/>
+    <updated>2016-12-19T13:09:35+05:30</updated>
+    <id>http://www.bootdb.com/get-list-files-inside-tar-archive-linux</id>
+    <content type="html"><![CDATA[<p>Get the list of files inside a tar archive in Linux using command line tar command:</p>
+
+<pre><code>tar --list -f archive.tar.gz
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Search and Replace Commands in Linux]]></title>
+    <link href="http://www.bootdb.com/search-replace-commands-in-linux/"/>
+    <updated>2016-12-19T13:06:20+05:30</updated>
+    <id>http://www.bootdb.com/search-replace-commands-in-linux</id>
+    <content type="html"><![CDATA[<p>Sed command does a great job for search and replace, let&#8217;s see an example:</p>
+
+<pre><code>sed -i -- 's/foo/bar/g' myfile.txt
+</code></pre>
+
+<p>This will convert the string &#8220;foo&#8221; to &#8220;bar&#8221; in myfile.txt, if you would like to perform this on all files use:</p>
+
+<pre><code>sed -i -- 's/foo/bar/g' *
+</code></pre>
+
+<p>The same can be done recursively using find command:</p>
+
+<pre><code>find . -type f -exec sed -i 's/foo/bar/g' {} +
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Resize a Image in Linux]]></title>
+    <link href="http://www.bootdb.com/resize-image-in-linux/"/>
+    <updated>2016-12-19T13:02:55+05:30</updated>
+    <id>http://www.bootdb.com/resize-image-in-linux</id>
+    <content type="html"><![CDATA[<p>Linux&#8217;s convert command line tool can be used to convert between image formats as well as resize an image, let&#8217;s see how to resize an image:</p>
+
+<pre><code>convert my_picture.png -resize 200x100 my_picture_200x100.jpg
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Extract Bz2 Archives in Linux]]></title>
+    <link href="http://www.bootdb.com/extract-bz2-archives-linux/"/>
+    <updated>2016-12-19T13:00:57+05:30</updated>
+    <id>http://www.bootdb.com/extract-bz2-archives-linux</id>
+    <content type="html"><![CDATA[<p>tar command can be used to extract bz2 archives, example:</p>
+
+<pre><code>tar -cvjSf folder.tar.bz2 folder
+</code></pre>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Remove AppEngine OAuth Tokens]]></title>
+    <link href="http://www.bootdb.com/remove-appengine-oauth-tokens/"/>
+    <updated>2016-12-12T21:24:28+05:30</updated>
+    <id>http://www.bootdb.com/remove-appengine-oauth-tokens</id>
+    <content type="html"><![CDATA[<p>In order to delete the AppEngine OAuth tokens, delete the file <strong>c:/Users//.appcfg_oauth2_tokens</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sprintf Equivalent in Javascript]]></title>
+    <link href="http://www.bootdb.com/sprintf-equivalent-javascript/"/>
+    <updated>2016-12-12T20:08:52+05:30</updated>
+    <id>http://www.bootdb.com/sprintf-equivalent-javascript</id>
+    <content type="html"><![CDATA[<p>Below are the two methods by which we can emulate sprintf in Javascript directly to console.log and String.format:</p>
+
+<p>console.log approach:</p>
+
+<pre><code>(function() {
+
+    var logger = console.log;
+
+    console.log = function() {
+
+        var format = function(str, args) {
+            logger(args);
+            return str.replace(/{(\d+)}/g, function(match, number) {
+                return typeof args[number] != 'undefined' ? args[number] : match;
+            });
+        };
+        var inputs = Array.prototype.slice.call(arguments);
+        logger(format(inputs.shift(), inputs));
+    }
+
+})()
+
+console.log("Hello {1}", 10, 100);&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+String.format approach:
+
+
+    if (!String.prototype.format) {
+      String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/{(\d+)}/g, function(match, number) { 
+          return typeof args[number] != 'undefined'
+            ? args[number]
+            : match
+          ;
+        });
+      };
+    }
+    "{0} is dead, but {1} is alive! {0} {2}".format("ASP", "ASP.NET");
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Trigger Event on Pressing Enter Key in AngularJS]]></title>
+    <link href="http://www.bootdb.com/trigger-event-on-pressing-enter-key-angularjs/"/>
+    <updated>2016-12-12T20:05:35+05:30</updated>
+    <id>http://www.bootdb.com/trigger-event-on-pressing-enter-key-angularjs</id>
+    <content type="html"><![CDATA[<p>Use the below directive which triggers a function when enter / return key is pressed:</p>
+
+<pre><code>.directive('ngEnter', function () {
+    return function (scope, element, attrs) {
+        element.bind("keydown keypress", function (event) {
+            if (event.which === 13) {
+                scope.$apply(function () {
+                    scope.$eval(attrs.ngEnter);
+                });
+                event.preventDefault();
+            }
+        });
+    };
+});
+</code></pre>
+
+<p>Usage:</p>
+
+<pre><code>&lt;input ng-model="input" ng-enter="enterTriggered"&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Emit a Event When Ng-repeat Is Completed AngularJS]]></title>
+    <link href="http://www.bootdb.com/emit-event-ng-repeat-completed/"/>
+    <updated>2016-12-12T20:03:09+05:30</updated>
+    <id>http://www.bootdb.com/emit-event-ng-repeat-completed</id>
+    <content type="html"><![CDATA[<p>Use a directive with ng-repeat which triggers a function when ng-repeat reaches to last element, directive code:</p>
+
+<pre><code>.directive('onFinishEmit', function($timeout) {
+    return {
+        restrict: 'A',       
+        link: function(scope, element, attr) {
+            if (scope.$last === true) {
+                $timeout(function() {                        
+                    scope.$emit(attr.onFinishEmit);
+                });
+            }
+        }
+    }
+});
+</code></pre>
+
+<p>Usage:</p>
+
+<pre><code>&lt;div ng-repeat="data in dataset" on-finish-emit="renderComplete"&gt;
+
+&lt;/div&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mysql Meta Commands Cheat Sheet]]></title>
+    <link href="http://www.bootdb.com/mysql-meta-commands-cheat-sheet/"/>
+    <updated>2016-12-12T19:59:49+05:30</updated>
+    <id>http://www.bootdb.com/mysql-meta-commands-cheat-sheet</id>
+    <content type="html"><![CDATA[<p>Create New User:</p>
+
+<pre><code>CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'newuser'@'%' IDENTIFIED BY 'password';&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+
+
+Grant Privileges:
+
+
+    GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT CREATE ON * . * TO 'newuser'@'localhost';
+    GRANT DROP PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT DELETE PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT INSERT PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT SELECT PRIVILEGES ON * . * TO 'newuser'@'localhost';
+    GRANT UPDATE PRIVILEGES ON * . * TO 'newuser'@'localhost';&lt;/pre&gt;
+    &lt;p&gt;&lt;/p&gt;
+
+
+    Revoke:
+
+
+        REVOKE [type of permission] ON [database name].[table name] FROM ‘[username]’@‘localhost’;&lt;/pre&gt;
+        &lt;p&gt;&lt;/p&gt;
+
+
+        Flush:
+
+
+            FLUSH PRIVILEGES;&lt;/pre&gt;
+            &lt;p&gt;&lt;/p&gt;
+
+
+            Drop user:
+
+
+                DROP USER ‘demo’@‘localhost’;&lt;/pre&gt;
+                &lt;p&gt;&lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Open Port From Command Line in Windows Server]]></title>
+    <link href="http://www.bootdb.com/windows-server-open-port-command-line/"/>
+    <updated>2016-12-12T19:56:53+05:30</updated>
+    <id>http://www.bootdb.com/windows-server-open-port-command-line</id>
+    <content type="html"><![CDATA[<p>Use netsh to open port from Command line in Window server:</p>
+
+<pre><code>netsh advfirewall firewall add rule name="Open Port 80" dir=in action=allow protocol=TCP localport=80
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[List of SQL Injection Strings]]></title>
+    <link href="http://www.bootdb.com/list-of-sql-injection-strings/"/>
+    <updated>2016-12-12T19:55:20+05:30</updated>
+    <id>http://www.bootdb.com/list-of-sql-injection-strings</id>
+    <content type="html"><![CDATA[<p>Below are the list of SQL injection strings:</p>
+
+<pre><code>' or 1=1--
+
+" or 1=1--
+
+or 1=1--
+
+' or 'a'='a
+
+" or "a"="a
+
+') or ('a'='a
+
+") or ("a"="a
+</code></pre>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Office365 Email Settings]]></title>
+    <link href="http://www.bootdb.com/office365-email-settings/"/>
+    <updated>2016-12-12T19:52:37+05:30</updated>
+    <id>http://www.bootdb.com/office365-email-settings</id>
+    <content type="html"><![CDATA[<p>Below are the office365 email settings in the following format</p>
+
+<pre>Server name
+Port
+Encryption method</pre>
+
+
+<p><strong>POP3</strong></p>
+
+<pre>outlook.office365.com
+995
+SSL</pre>
+
+
+<p><strong>IMAP4</strong></p>
+
+<pre>outlook.office365.com
+993
+SSL</pre>
+
+
+<p><strong>SMTP</strong></p>
+
+<pre>smtp.office365.com
+587
+TLS</pre>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Import Azure Cdmlets Into Powershell]]></title>
+    <link href="http://www.bootdb.com/import-azure-cdmlets-powershell/"/>
+    <updated>2016-12-12T19:49:40+05:30</updated>
+    <id>http://www.bootdb.com/import-azure-cdmlets-powershell</id>
+    <content type="html"><![CDATA[<p>After installing Azure SDK by using Import-Module we can import azure cdmlets into Powershell like below:</p>
+
+<pre><code>Import-Module "C:\Program Files (x86)\Microsoft SDKs\Azure\PowerShell\ServiceManagement\Azure"&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;&lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Format a Drive in Linux]]></title>
+    <link href="http://www.bootdb.com/format-drive-linux/"/>
+    <updated>2016-12-12T19:47:42+05:30</updated>
+    <id>http://www.bootdb.com/format-drive-linux</id>
+    <content type="html"><![CDATA[<p>To format a drive in Linux use:</p>
+
+<pre><code># Choose which volume you want to format:
+fdisk -l
+
+# Unmount the volume:
+umount /dev/sdb1
+
+# Format it:
+mkfs.vfat /dev/sdb1&lt;/pre&gt;
+&lt;p&gt;&lt;/p&gt;
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Allow ICMP Echo Request From the Command Line in Windows]]></title>
+    <link href="http://www.bootdb.com/allow-icmp-echo-request-command-line-windows/"/>
+    <updated>2016-12-12T19:45:25+05:30</updated>
+    <id>http://www.bootdb.com/allow-icmp-echo-request-command-line-windows</id>
+    <content type="html"><![CDATA[<p>Allow ICMP Echo Request (ping) From the Command Line:</p>
+
+<pre>&lt;cpde>netsh firewall set icmpsetting 8 enable&lt;/code></pre>
+
+
+<p>To disable it again, simply enter this command:</p>
+
+<pre><code>netsh firewall set icmpsetting 8 disable
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Read Process Output in Powershell]]></title>
+    <link href="http://www.bootdb.com/read-process-output-powershell/"/>
+    <updated>2016-12-12T19:43:39+05:30</updated>
+    <id>http://www.bootdb.com/read-process-output-powershell</id>
+    <content type="html"><![CDATA[<p>If you are running a process via powershell you can capture the stdout and stderr using <strong>StandardOutput.ReadToEnd()</strong> and <strong>StandardError.ReadToEnd()</strong>, below is the example:</p>
+
+<pre><code>$pinfo = New-Object System.Diagnostics.ProcessStartInfo
+$pinfo.FileName = "ping.exe"
+$pinfo.RedirectStandardError = $true
+$pinfo.RedirectStandardOutput = $true
+$pinfo.UseShellExecute = $false
+$pinfo.Arguments = "localhost"
+$p = New-Object System.Diagnostics.Process
+$p.StartInfo = $pinfo
+$p.Start() | Out-Null
+$p.WaitForExit()
+$stdout = $p.StandardOutput.ReadToEnd()
+$stderr = $p.StandardError.ReadToEnd()
+Write-Host "stdout: $stdout"
+Write-Host "stderr: $stderr"
+Write-Host "exit code: " + $p.ExitCode
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Convert CR2 to JPG in Ubuntu]]></title>
+    <link href="http://www.bootdb.com/convert-cr2-to-jpg-ubuntu/"/>
+    <updated>2016-12-12T19:41:01+05:30</updated>
+    <id>http://www.bootdb.com/convert-cr2-to-jpg-ubuntu</id>
+    <content type="html"><![CDATA[<p>Convert cr2 to jpeg files in Ubuntu in a few simple steps:</p>
+
+<p><strong>Step 1: Install ufraw</strong></p>
+
+<pre><code>sudo apt-get install ufraw
+</code></pre>
+
+<p><strong>Step 2: For ufraw</strong></p>
+
+<pre><code>for i in *.CR2; do ufraw-batch $i --out-type=jpeg --output $i.jpg; done;
+</code></pre>
+
+<p>This will convert all cr2 files a directory into jpeg files, later if you don&#8217;t want cr2 files use <strong>rm -f *.cr2</strong></p>
+]]></content>
+  </entry>
+  
+</feed>

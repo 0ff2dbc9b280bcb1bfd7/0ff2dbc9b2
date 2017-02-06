@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Enable GZip in Apache Using .htaccess - BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="Gzip would improve your site performance by compressing the HTML, CSS &amp; JS. To enable Gzip in Apahce using .htaccess add below lines to your &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/enable-gzip-in-apache-using-htaccess/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Enable GZip in Apache Using .htaccess</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:11:38+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:11 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Gzip would improve your site performance by compressing the HTML, CSS &amp; JS. To enable Gzip in Apahce using .htaccess add below lines to your htaccess:</p>
+
+<pre>&lt;ifModule mod_gzip.c&gt;
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+&lt;/ifModule&gt;
+</pre>
+
+
+<p>Gzip should be enabled now in Apache after restart, to test if it’s working, use <a href="http://www.myewblog.com/enable-gzip-in-apache-using-htaccess/Check%20Gzip%20Compression">https://checkgzipcompression.com/</a> tool or more using curl:</p>
+
+<pre>curl -I -H 'Accept-Encoding: gzip,deflate' http://www.myewblog.com/
+</pre>
+
+
+<p>Among the output headers, <strong>Content-Encoding</strong> header shold be set to <strong>gzip</strong>, like below.</p>
+
+<pre>HTTP/1.1 200 OK
+Date: Mon, 24 Oct 2016 04:27:08 GMT
+Server: EW Apache
+Last-Modified: Mon, 24 Oct 2016 04:10:34 GMT
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 10095
+Content-Type: text/html
+</pre>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">editor</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:11:38+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:11 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/tech/'>tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.bootdb.com/enable-gzip-in-apache-using-htaccess/" data-via="" data-counturl="http://www.bootdb.com/enable-gzip-in-apache-using-htaccess/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/change-apache-server-signature-or-header-in-linux/" title="Previous Post: Change Apache Server Signature / Header in Linux">&laquo; Change Apache Server Signature / Header in Linux</a>
+      
+      
+        <a class="basic-alignment right" href="/how-to-play-mkv-format-in-vlc-in-ubuntu/" title="Next Post: How to Play Mkv Format in Vlc in Ubuntu">How to Play Mkv Format in Vlc in Ubuntu &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

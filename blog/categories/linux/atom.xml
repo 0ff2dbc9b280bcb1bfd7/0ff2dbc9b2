@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Linux | BootDB]]></title>
+  <link href="http://www.bootdb.com/blog/categories/linux/atom.xml" rel="self"/>
+  <link href="http://www.bootdb.com/"/>
+  <updated>2017-01-10T19:08:55+05:30</updated>
+  <id>http://www.bootdb.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How to Get List of DNS Servers Linux Is Using]]></title>
+    <link href="http://www.bootdb.com/get-list-dns-servers-linux-is-using/"/>
+    <updated>2016-12-19T13:11:22+05:30</updated>
+    <id>http://www.bootdb.com/get-list-dns-servers-linux-is-using</id>
+    <content type="html"><![CDATA[<p>To get the list of DNS server which Linux is currently referring to use:</p>
+
+<pre><code>nmcli dev list | grep DNS
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Get List of Files Inside a Tar Archive in Linux]]></title>
+    <link href="http://www.bootdb.com/get-list-files-inside-tar-archive-linux/"/>
+    <updated>2016-12-19T13:09:35+05:30</updated>
+    <id>http://www.bootdb.com/get-list-files-inside-tar-archive-linux</id>
+    <content type="html"><![CDATA[<p>Get the list of files inside a tar archive in Linux using command line tar command:</p>
+
+<pre><code>tar --list -f archive.tar.gz
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Search and Replace Commands in Linux]]></title>
+    <link href="http://www.bootdb.com/search-replace-commands-in-linux/"/>
+    <updated>2016-12-19T13:06:20+05:30</updated>
+    <id>http://www.bootdb.com/search-replace-commands-in-linux</id>
+    <content type="html"><![CDATA[<p>Sed command does a great job for search and replace, let&#8217;s see an example:</p>
+
+<pre><code>sed -i -- 's/foo/bar/g' myfile.txt
+</code></pre>
+
+<p>This will convert the string &#8220;foo&#8221; to &#8220;bar&#8221; in myfile.txt, if you would like to perform this on all files use:</p>
+
+<pre><code>sed -i -- 's/foo/bar/g' *
+</code></pre>
+
+<p>The same can be done recursively using find command:</p>
+
+<pre><code>find . -type f -exec sed -i 's/foo/bar/g' {} +
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Resize a Image in Linux]]></title>
+    <link href="http://www.bootdb.com/resize-image-in-linux/"/>
+    <updated>2016-12-19T13:02:55+05:30</updated>
+    <id>http://www.bootdb.com/resize-image-in-linux</id>
+    <content type="html"><![CDATA[<p>Linux&#8217;s convert command line tool can be used to convert between image formats as well as resize an image, let&#8217;s see how to resize an image:</p>
+
+<pre><code>convert my_picture.png -resize 200x100 my_picture_200x100.jpg
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to Extract Bz2 Archives in Linux]]></title>
+    <link href="http://www.bootdb.com/extract-bz2-archives-linux/"/>
+    <updated>2016-12-19T13:00:57+05:30</updated>
+    <id>http://www.bootdb.com/extract-bz2-archives-linux</id>
+    <content type="html"><![CDATA[<p>tar command can be used to extract bz2 archives, example:</p>
+
+<pre><code>tar -cvjSf folder.tar.bz2 folder
+</code></pre>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+</feed>

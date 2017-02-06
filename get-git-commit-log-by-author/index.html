@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Get Git Commit Log by Author - BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="Git log’s &#8211;author flag can be used to list the commits made by a author, working example: git log &#8211;author=&#8221;joe@gmail.com&#8221; Git &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/get-git-commit-log-by-author/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Get Git Commit Log by Author</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T09:58:22+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:58 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>Git log’s <em>&#8211;author</em> flag can be used to list the commits made by a author, working example:</p>
+
+<blockquote><p>git log &#8211;author=&#8221;joe@gmail.com&#8221;</p></blockquote>
+
+<p>Git search for author is however not a strict comparision, if the given input exists in author, git prints that out, for example using <em>@example.com</em> in search field will list out all commits of author who uses example.com email:</p>
+
+<blockquote><p>git log &#8211;author=&#8221;@example.com&#8221;</p></blockquote>
+
+<p><strong>Tips:</strong></p>
+
+<ul>
+<li>Using <em>&#8211;no-pager</em> flag prints output to stdout instead of pager (new window)</li>
+<li>Using <em>-1</em> will restrict git log to one result. (1 can be replaced with any numeric)</li>
+</ul>
+
+
+<p><strong>To get the recent commit made by a author use:</strong></p>
+
+<blockquote><p>git log -1 &#8211;author=&#8221;joe@gmail.com&#8221;</p></blockquote>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">editor</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T09:58:22+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:58 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/tech/'>tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.bootdb.com/get-git-commit-log-by-author/" data-via="" data-counturl="http://www.bootdb.com/get-git-commit-log-by-author/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/create-index-on-bins-in-aerospike/" title="Previous Post: Create Bin Index in Aerospike">&laquo; Create Bin Index in Aerospike</a>
+      
+      
+        <a class="basic-alignment right" href="/read-contents-of-uploaded-file-in-spring-mvc/" title="Next Post: Read Contents of Uploaded File in Spring MVC">Read Contents of Uploaded File in Spring MVC &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

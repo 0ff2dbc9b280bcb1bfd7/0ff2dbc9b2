@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Javascript | BootDB]]></title>
+  <link href="http://www.bootdb.com/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://www.bootdb.com/"/>
+  <updated>2017-01-10T19:08:55+05:30</updated>
+  <id>http://www.bootdb.com/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix Floating Point Precision in JavaScript]]></title>
+    <link href="http://www.bootdb.com/floating-point-precision-javascript/"/>
+    <updated>2016-12-27T11:42:05+05:30</updated>
+    <id>http://www.bootdb.com/floating-point-precision-javascript</id>
+    <content type="html"><![CDATA[<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_objects/Number/toPrecision">toPrecision</a> is a JavaScript built-in function which can be used to set precision of a floating number, example usage:</p>
+
+<pre><code>var number = 123.456789;
+number.toPrecision(5); // returns string: '123.46'
+</code></pre>
+
+<p>To convert string to number use:</p>
+
+<pre><code>Number(number.toPrecision(5));
+</code></pre>
+
+<p>&nbsp;</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="Exposing .git folder access is not a good idea, you can redirect .git to 404 using .htaccess: RedirectMatch 404 /.git Resources: Enable htaccess in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/posts/9/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/disable-git-folder-access-apache/">Disable .git Folder Access in Apache</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:50:30+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:50 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Exposing .git folder access is not a good idea, you can redirect .git to 404 using .htaccess:</p>
+
+<blockquote><p>RedirectMatch 404 /.git</p></blockquote>
+
+<p>Resources:</p>
+
+<ul>
+<li> <a href="http://www.bestblog.co/tech/enable-htaccess-apache/">Enable htaccess in Apache</a></li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/implementing-scheduled-delayed-queue-using-activemq/">Implementing Scheduled / Delayed Queue Using ActiveMQ</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:37:42+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:37 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>ActiveMQ has in-built support for scheduler, this adds support to deliver a message to the listener after x time. To enable this support add <strong>chedulerSupport=&#8221;true&#8221;</strong> in broker tag in <span style="text-decoration: underline;">activemq.xml</span>, broker tag with scheduler support looks like this:</p>
+
+<blockquote><p><span class="nt">&lt;broker</span> <span class="na">xmlns=</span><span class="s">&#8220;<a href="http://activemq.apache.org/schema/core&amp;#8221;">http://activemq.apache.org/schema/core&amp;#8221;</a></span> <span class="na">brokerName=</span><span class="s">&#8220;localhost&#8221;</span> <span class="na">dataDirectory=</span><span class="s">&#8220;${activemq.data}&#8221;</span> <span class="na">schedulerSupport=</span><span class="s">&#8220;true&#8221;</span><span class="nt">></span></p></blockquote>
+
+<p>To schedule a <a href="http://activemq.apache.org/maven/apidocs/org/apache/activemq/command/ActiveMQTextMessage.html">ActiveMQ message</a> any scheduled property need to be set using setLongProperty). Avaliable properties are:</p>
+
+<ul>
+<li>AMQ_SCHEDULED_DELAY</li>
+<li>AMQ_SCHEDULED_PERIOD</li>
+<li>AMQ_SCHEDULED_REPEAT</li>
+<li>AMQ_SCHEDULED_CRON</li>
+</ul>
+
+
+<p>Read more about this &#8211; <a href="http://activemq.apache.org/delay-and-schedule-message-delivery.html">here</a></p>
+
+<p>A sample using AMQ_SCHEDULED_DELAY to delay message for 10 seconds:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/use-semi-colon-with-awk/">Use Semi Colon With AWK</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:35:30+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:35 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>awk uses space or tab as default separator, however awk provides <strong>–field-separator</strong> option to specify the separator. Let’s see an example:</p>
+
+<p>command:</p>
+
+<blockquote><p>awk &#8211;field-separator=&#8221;;&#8221; &#8216;{print $1}&#8217; test.txt</p></blockquote>
+
+<p>test.txt file:</p>
+
+<blockquote><p>computer;science;foo;bar</p></blockquote>
+
+<p>By running the awk command, we get:</p>
+
+<blockquote><p>awk &#8211;field-separator=&#8221;;&#8221; &#8216;{print $2}&#8217; test.txt</p>
+
+<p>science</p></blockquote>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/open-new-terminal-tab-using-command-linux/">Open New Terminal Tab Using Command in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:08:27+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:08 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Linux default (gnome in Ubuntu) terminal doesn’t provide an API / Command to open a new tab, however new window can be opened using <strong>gnome-terminal</strong> command. Terminal provides a shortcut <strong>Ctrl+Shift+t</strong> to open a new tab, leveraging this we can use <strong>xdotool</strong> to emulate the new tab shortcut.</p>
+
+<p><em>xdotool</em> according to <a href="http://www.linux.org/threads/xdotool-keyboard.6414/">Linux.org</a>:</p>
+
+<blockquote><p>The xdotool is a utility used from the terminal or in a script to manually perform keyboard input. The commands can also be used to make a script of many xdotool commands to perform large tasks. Later articles will cover the xdotool ability to perform mouse input as well as window and desktop manipulation.</p></blockquote>
+
+<p>Install xdotool:</p>
+
+<blockquote><p># Ubuntu</p>
+
+<p>sudo apt-get install xdotool</p>
+
+<p># Fedora / CentOS:</p>
+
+<p>sudo yum install xdotool</p></blockquote>
+
+<p>Now trigger the new tab shortcut using: <strong>xdotool key ctrl+shift+t</strong></p>
+
+<p>Create a alias for ease: <strong>alias newtab=&#8221;xdotool key ctrl+shift+t&#8221;</strong></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/install-and-enable-php-mcrypt-in-linux-ubuntu/">Install and Enable PHP Mcrypt in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:05:54+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:05 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Quick cheat sheet to install PHP Mcrypt in Ubuntu:</p>
+
+<blockquote><p>sudo apt-get install php5-mcrypt</p>
+
+<p>cat /etc/php5/mods-available/mcrypt.ini</p>
+
+<p>sudo php5enmod mcrypt</p>
+
+<p>sudo service apache2 reload</p></blockquote>
+
+<p>Cent / RedHat equivalent:</p>
+
+<blockquote><p>yum install php-mcrypt*</p></blockquote>
+
+<p>Alternatively you can compilie PHP from source with the <strong>–with-mcrypt[=DIR]</strong> parameter to enable mcrypt.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/minify-compress-sass-in-jekyll/">Compress SASS in Jekyll</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:03:50+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:03 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Jekyll by default does not minify / compress SASS files, however this feature is supported by Jekyll without any additional plugins to enable this add below lines in <strong>_config.yml</strong>:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/get-open-netowrk-ports-in-linux/">Get All Open Netowrk Ports in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:02:47+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:02 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Netstat command can be used to print all openports and status of the port use:</p>
+
+<blockquote><p>netstat -tulanp</p></blockquote>
+
+<p>To look up for a selected port, use:</p>
+
+<blockquote><p>netstat -tulanp | grep PORT</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/read-contents-of-uploaded-file-in-spring-mvc/">Read Contents of Uploaded File in Spring MVC</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T10:00:40+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>When uploading files using Spring’s <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/multipart/MultipartFile.html">MultipartFile</a> this provides <a href="http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/multipart/MultipartFile.html#getInputStream--">getInputStream</a> API which provide InputStream of the file. We can convert this InputStream to String to capture the data.</p>
+
+<p>Working example:</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/get-git-commit-log-by-author/">Get Git Commit Log by Author</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T09:58:22+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:58 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Git log’s <em>&#8211;author</em> flag can be used to list the commits made by a author, working example:</p>
+
+<blockquote><p>git log &#8211;author=&#8221;joe@gmail.com&#8221;</p></blockquote>
+
+<p>Git search for author is however not a strict comparision, if the given input exists in author, git prints that out, for example using <em>@example.com</em> in search field will list out all commits of author who uses example.com email:</p>
+
+<blockquote><p>git log &#8211;author=&#8221;@example.com&#8221;</p></blockquote>
+
+<p><strong>Tips:</strong></p>
+
+<ul>
+<li>Using <em>&#8211;no-pager</em> flag prints output to stdout instead of pager (new window)</li>
+<li>Using <em>-1</em> will restrict git log to one result. (1 can be replaced with any numeric)</li>
+</ul>
+
+
+<p><strong>To get the recent commit made by a author use:</strong></p>
+
+<blockquote><p>git log -1 &#8211;author=&#8221;joe@gmail.com&#8221;</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/create-index-on-bins-in-aerospike/">Create Bin Index in Aerospike</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T09:55:50+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:55 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Aerospike does not allow to query data set using other than PK (primary key) by default, however we may run into cases where querying on bins is required as well, consider the below example:</p>
+
+<p>Querying data using PK:</p>
+
+<p>Querying data using BIN (AGE):</p>
+
+<p>Aerospike throws AEROSPIKE_ERR_INDEX_NOT_FOUND error, to query data on bin the bin should be indexed first, run the below query:</p>
+
+<blockquote><p>aql> CREATE INDEX USER_AGE_IDX ON test.data (AGE) NUMERIC</p></blockquote>
+
+<p>Now you can query the BIN &#8211; AGE:</p>
+
+<p>If you want to add INDEX on EMAIL which is a string replace, NUMERIC with STRING:</p>
+
+<blockquote><p>CREATE INDEX USER_AGE_IDX ON test.data (EMAIL) STRING</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/10">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/8">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

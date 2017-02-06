@@ -1,0 +1,697 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="By default VLC does not support mkv file format, to get this working run the below command: sudo apt-get install ubuntu-restricted-extras This should &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/posts/6/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/how-to-play-mkv-format-in-vlc-in-ubuntu/">How to Play Mkv Format in Vlc in Ubuntu</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:12:41+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:12 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>By default VLC does not support mkv file format, to get this working run the below command:</p>
+
+<pre>sudo apt-get install ubuntu-restricted-extras</pre>
+
+
+<p>This should be able to install necessary codecs including mkv, but if you are still facing the issue run:</p>
+
+<pre>sudo apt-get install vlc-plugin-libde265</pre>
+
+
+<p>This should fix the issue, hope it helps.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/enable-gzip-in-apache-using-htaccess/">Enable GZip in Apache Using .htaccess</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:11:38+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:11 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Gzip would improve your site performance by compressing the HTML, CSS &amp; JS. To enable Gzip in Apahce using .htaccess add below lines to your htaccess:</p>
+
+<pre>&lt;ifModule mod_gzip.c&gt;
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+&lt;/ifModule&gt;
+</pre>
+
+
+<p>Gzip should be enabled now in Apache after restart, to test if it’s working, use <a href="http://www.myewblog.com/enable-gzip-in-apache-using-htaccess/Check%20Gzip%20Compression">https://checkgzipcompression.com/</a> tool or more using curl:</p>
+
+<pre>curl -I -H 'Accept-Encoding: gzip,deflate' http://www.myewblog.com/
+</pre>
+
+
+<p>Among the output headers, <strong>Content-Encoding</strong> header shold be set to <strong>gzip</strong>, like below.</p>
+
+<pre>HTTP/1.1 200 OK
+Date: Mon, 24 Oct 2016 04:27:08 GMT
+Server: EW Apache
+Last-Modified: Mon, 24 Oct 2016 04:10:34 GMT
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Content-Length: 10095
+Content-Type: text/html
+</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/change-apache-server-signature-or-header-in-linux/">Change Apache Server Signature / Header in Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:07:28+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:07 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Apache emits Server header to make other identify it as a apache server, along with this it also adds operating system name, example:</p>
+
+<pre>Server: Apache/2.4.7 (Ubuntu)
+</pre>
+
+
+<p><strong>Option 1:</strong> Tell apache send only minimal information</p>
+
+<ul>
+<li>Edit Apache’s <code>security.conf</code> (<code>cd /etc/apache2/conf-available/ &amp;&amp; sudo vim security.conf</code>)</li>
+<li>Change: ServerTokens to Prod and ServerSignature to Off</li>
+<li>Restart Apache: <code>sudo service apache2 restart</code></li>
+</ul>
+
+
+<p><strong>Option 2:</strong> Change the server signature using modsecurity</p>
+
+<p>If you want to honeypot someone or be secure for any loopholes in future for your Apache version, you can remove this or change the signature.</p>
+
+<ul>
+<li>Install <strong>modsecurity</strong>: <code>sudo apt-get install libapache2-modsecurity</code>. Verify if the mod_security module was loaded: <code>apachectl -M | grep --color security</code>.</li>
+<li>Change the recommended config to config: <code>sudo mv /etc/modsecurity/modsecurity.conf{-recommended,}</code></li>
+<li>Edit the config file: <code>sudo vim /etc/modsecurity/modsecurity.conf</code></li>
+</ul>
+
+
+<p>Try to find <strong>SecServerSignature</strong>, if found the value is the server signature else add below like:</p>
+
+<pre>SecServerSignature "joe's server"
+</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/get-mysql-output-as-csv/">Get MySQL Output as CSV</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:05:33+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:05 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Usual method to dump mysql query data into csv is to use the following format:</p>
+
+<p>But often times we run into problems with permissions, but we can just use mysql command line client to get the same data with INTO OUTFILE syntax:</p>
+
+<blockquote><p>mysql -u username -p -h127.0.0.1 &#8211;batch -e <span class="s2">&#8220;QUERY&#8221;</span> example <span class="p">|</span> sed <span class="s2">&#8220;s/&#8217;/&amp;#8217;/;s/\t/,/g&#8221;</span> > data.csv</p></blockquote>
+
+<ul>
+<li><code>--batch</code>: will ignore the table format</li>
+<li><code>-e</code>: To run query passed as an argument</li>
+<li><code>sed</code>: To format the output to csv</li>
+</ul>
+
+
+<p>In this approach we have a very little overhead as we pipe data to sed and expect it to do the formating instead of MySQL.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/java-properties-file-alternative-in-php/">Java Properties Alternative in PHP</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T13:04:14+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>1:04 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In Java we often use properties file to store app level properties / config. The same approch can be followed using PHPs <code>.ini</code> files. Let’s see an example:</p>
+
+<p>Create a sample file <code>config.ini</code> with following contents:</p>
+
+<pre>[DATABASE_CONFIG]
+DB_HOST=127.0.0.1
+DB_USER=root
+DB_PASSWORD=root
+DB_DATABASE=test</pre>
+
+
+<p>And <code>config.php</code> file with following contents:</p>
+
+<p>When you run this (<code>php config.php</code>) the following output is generated:</p>
+
+<pre>Array
+(
+    [DB_HOST] =&gt; 127.0.0.1
+    [DB_USER] =&gt; root
+    [DB_PASSWORD] =&gt; root
+    [DB_DATABASE] =&gt; test
+)
+</pre>
+
+
+<p>Individual properties can be accessed by using the $config object,</p>
+
+<pre>$dbUser = $config['DB_USER'];
+</pre>
+
+
+<p>Now, for example we may run into times where we may be conflicting property naming, for example:</p>
+
+<pre>[MASTER_DATABASE_CONFIG]
+DB_HOST=127.0.0.1
+DB_USER=root
+DB_PASSWORD=root
+DB_DATABASE=test
+
+[SLAVE_DATABASE_CONFIG]
+DB_HOST=127.0.0.2
+DB_USER=slave_root
+DB_PASSWORD=slave_root
+DB_DATABASE=test
+</pre>
+
+
+<p>With this config.ini when you try to access <code>$config['DB_USER'];</code> this will return <code>slave_root</code> as SLAVE_DATABASE_CONFIG overrides the MASTER_DATABASE_CONFIG as it’s the latest avaliable data, to overcome this parse_ini_file function takes an optional parameter process_sections, which is set to FALSE by default, when we set it to TRUE and run the config.php we get the following output:</p>
+
+<pre>Array
+(
+    [MASTER_DATABASE_CONFIG] => Array
+        (
+            [DB_HOST] => 127.0.0.1
+            [DB_USER] => root
+            [DB_PASSWORD] => root
+            [DB_DATABASE] => test
+        )
+
+    [SLAVE_DATABASE_CONFIG] => Array
+        (
+            [DB_HOST] => 127.0.0.2
+            [DB_USER] => slave_root
+            [DB_PASSWORD] => slave_root
+            [DB_DATABASE] => test
+        )
+
+)
+</pre>
+
+
+<p>Now DB_USER should be accessed by sections,</p>
+
+<pre>$config['MASTER_DATABASE_CONFIG']['DB_USER'];
+</pre>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/mysql-unique-key-on-two-or-more-columns/">MySQL Unique Key on Two or More Columns</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:59:40+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:59 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We are often confortable adding unique key constraints on a single column, but we may come across a situation where unique key on a combination should be added, i.e; unique key on a set of two or more columns, let’s see how.</p>
+
+<p>Unique key on a single column:</p>
+
+<p>Unique key on a set of columns:</p>
+
+<p>Now let’s run a few queries and see when we get a ket voliation:</p>
+
+<blockquote><p>insert into user(EMAIL, PHONE) values(&#8216;joe@example.com&#8217;,&#8217;99999&#8242;); &#8212; SUCCESS</p>
+
+<p>insert into user(EMAIL, PHONE) values(&#8216;joe@example.com&#8217;,&#8217;12344&#8242;); &#8212; SUCCESS</p>
+
+<p>insert into user(EMAIL, PHONE) values(&#8216;bob@example.com&#8217;,&#8217;12344&#8242;); &#8212; SUCCESS</p>
+
+<p>insert into user(EMAIL, PHONE) values(&#8216;joe@example.com&#8217;,&#8217;12344&#8242;); &#8212; ERROR</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/writing-proxy-server-nodejs/">Writing a Proxy Server in NodeJS</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:57:49+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:57 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Node.JS provides a tremendous API for HTTP, I’ve tried to create a proxy server in Python a while ago, however I achieved it with a moderate success, Python does not get hand in hand with HTTP and require to use a few third party libraries for ease, this is quite opposite in the case of Node.JS. I’ve a fully functional proxy in just 75 lines of code with zero third party dependencies. Below is the code:</p>
+
+<p>To run, save the code and run: <strong>node proxy.js</strong></p>
+
+<p>This will start a proxy server running on port 5050 (<a href="http://localhost:5050/">localhost:5050</a>) proxying localhost:80, as defined in the config.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/backup-your-imgur-account/">Backup Your Imgur Account</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:56:11+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:56 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Imgur does not provide a solution to backup the whole account, neither there are solid solutions online. In this post I will demonstrate how to use <a href="https://api.imgur.com/">Imgur API</a> to download all of your Imgur images. Let’s get started:</p>
+
+<p>Imgur has <a href="https://api.imgur.com/endpoints/account#images">a specific API</a> to access images of a paticular user, for example to retrive images of a user joe, browse: <a href="https://api.imgur.com/3/account/joe/images">api.imgur.com/3/account/joe/images</a>, unfortunately this results in 401 error, which means this data is protected and not public, so does yours. To access this data Imgur requires us to send authencation data as well, let’s see how.</p>
+
+<p><strong>Step 1: Register an Application</strong></p>
+
+<p>Go to <a href="https://api.imgur.com/oauth2/addclient">api.imgur.com/oauth2/addclient</a>, enter the name of application and select <em>OAuth 2 authorization without a callback URL</em>, just like below screenshot.</p>
+
+<p><img class="alignnone size-full wp-image-98" src="http://www.bestblog.co/wp-content/uploads/2016/10/imgur-backup-1.png" alt="imgur-backup-1" width="372" height="182" /></p>
+
+<p>Sumbit the form. Now you be presented with client ID and client secrect, just like this:</p>
+
+<p><img class="alignnone size-full wp-image-99" src="http://www.bestblog.co/wp-content/uploads/2016/10/imgur-backup-2.png" alt="imgur-backup-2" width="696" height="380" /></p>
+
+<p><strong>Step 2: Retrieve OAuth2 Token:</strong></p>
+
+<p>Go to: <a href="https://api.imgur.com/oauth2/authorize?client_id=12345&amp;response_type=token&amp;state=APPLICATION_STATE">api.imgur.com/oauth2/authorize?client_id=12345&amp;response_type=token&amp;state=APPLICATION_STATE</a>, <em>Replace 12345 with actual client id</em>. Grant the access to the application,</p>
+
+<p><img class="alignnone size-full wp-image-100" src="http://www.bestblog.co/wp-content/uploads/2016/10/imgur-backup-3.png" alt="imgur-backup-3" width="735" height="438" /></p>
+
+<p>Once you grant the access, you get the access token in the URL, (copy it).</p>
+
+<p><img class="alignnone size-full wp-image-101" src="http://www.bestblog.co/wp-content/uploads/2016/10/imgur-backup-4.png" alt="imgur-backup-4" width="1147" height="38" /></p>
+
+<p><strong>Step 3: Download images:</strong></p>
+
+<p><em>This might be a difficult step for a few users.</em>, you need <a href="http://nodejs.org/">Node.JS</a> installed before hand.</p>
+
+<p>Run these commands:</p>
+
+<blockquote><p>npm install request</p>
+
+<p>node imgur.js > imgur-wget.sh</p>
+
+<p>bash imgur-wget.sh</p></blockquote>
+
+<div class="entry-content">
+  <p>
+    Replace joe & 12345, with your username and oauth2 token respectively.
+  </p>
+  
+  <p>
+    If you need to download any other pages use: <code>https://api.imgur.com/3/account/joe/images/1</code>, <code>https://api.imgur.com/3/account/joe/images/2</code>, etc.
+  </p>
+</div>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/bitbucket-readonly-ssh-repository-access/">BitBucket Readonly SSH Repository Access</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:50:09+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:50 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>BitBucket deployment keys can be used to have readonly access to a repository, according to BitBucket documentation:</p>
+
+<blockquote><p>A deployment key grants read-only access to a public or private repository. With a deployment key a user or a process can pull or clone a repository over SSH.</p></blockquote>
+
+<p>To configure deployment keys, open repository settings and click “Add Key”, sample screenshot:</p>
+
+<p><img class="alignnone size-full wp-image-95" src="http://www.bestblog.co/wp-content/uploads/2016/10/BitBucket-Deployment-Keys.png" alt="bitbucket-deployment-keys" width="542" height="286" /></p>
+
+<p>Read more at: <a href="https://confluence.atlassian.com/bitbucket/use-deployment-keys-294486051.html">confluence.atlassian.com/bitbucket/use-deployment-keys-294486051.html</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/get-all-categories-in-octopress/">Get All Categories in Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-29T12:47:59+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>29</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>12:47 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Get all site categories in octopress:</p>
+
+<blockquote><p>tech</p>
+
+<p>ubuntu</p>
+
+<p>linux</p>
+
+<p>windows</p>
+
+<p>databases</p>
+
+<p>web-dev</p>
+
+<p>networking</p>
+
+<p>javascript</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/posts/7">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/posts/5">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

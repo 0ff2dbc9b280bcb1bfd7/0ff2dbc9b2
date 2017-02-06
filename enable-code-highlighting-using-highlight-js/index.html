@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Enable Code Highlighting Using HighlightJS - BootDB</title>
+  <meta name="author" content="">
+
+  
+  <meta name="description" content="HighlightJS is the simplest way to enable syntax highlighting on the web, I&#8217;v tried Google code prettify, but found it a little more complex &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.bootdb.com/enable-code-highlighting-using-highlight-js/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="BootDB" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">BootDB</a></h1>
+  
+    <h2>Code | Open Source | Web</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="www.bootdb.com">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Enable Code Highlighting Using HighlightJS</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-10-30T10:46:15+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:46 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>HighlightJS is the simplest way to enable syntax highlighting on the web, I&#8217;v tried <a href="https://github.com/google/code-prettify">Google code prettify</a>, but found it a little more complex than highlight js. You will be able to get highlight js up and running in 4 simple steps:</p>
+
+<p><strong>Step 1: Download:</strong></p>
+
+<p>Go to <a href="https://highlightjs.org/download/">highlightjs.org/download</a> to download the library, I recommend to customize the download by selecting the languages you use, instead of the whole library.</p>
+
+<p><strong>Step 2: Import:</strong></p>
+
+<p>Once you download the library (I&#8217;m using a customized version), you should be having two important things, 1 the <strong>highlight.pack.js</strong> file and 2 the <strong>styles</strong> folder. Styles folder have multiple styles (themes) that you can choose from, I&#8217;m using github-gist style, which is very similar to the <a href="http://gist.github.com/">gist.github.com</a>. Now import style and js into html:</p>
+
+<pre>&lt;link rel="stylesheet" type="text/css" href="github-gist.css"&gt;
+&lt;script src="highlight.pack.js"&gt;&lt;/script&gt;
+</pre>
+
+
+<p><strong>Step 3: Add code:</strong></p>
+
+<p>Let&#8217;s add some code to the web page so that highlight js could highlight it, consider the below example:</p>
+
+<pre>&lt;pre&gt;&lt;code&gt;function sayHello(){
+    console.log("Hello!");
+}
+sayHello();&lt;/code&gt;&lt;/pre&gt;
+</pre>
+
+
+<p><strong>Step 4: Init HighlightJS:</strong></p>
+
+<p>Now, call the highlight JS init function by running:</p>
+
+<pre>hljs.initHighlightingOnLoad();
+</pre>
+
+
+<p>The webpage should like below:</p>
+
+<p><img src="http://i.imgur.com/C6uLpKj.png" alt="" /></p>
+
+<p>Here is the complete HTML page which I used:</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">editor</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-10-30T10:46:15+05:30'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>30</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>10:46 am</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/tech/'>tech</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.bootdb.com/enable-code-highlighting-using-highlight-js/" data-via="" data-counturl="http://www.bootdb.com/enable-code-highlighting-using-highlight-js/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/redirect-site-using-apache/" title="Previous Post: Redirect a site using Apache">&laquo; Redirect a site using Apache</a>
+      
+      
+        <a class="basic-alignment right" href="/enable-write-permissions-to-a-directory-in-linux/" title="Next Post: How to Enable Write Permissions to a Directory In Linux">How to Enable Write Permissions to a Directory In Linux &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/title/">Metric Analytics &amp; Alerting</a>
+      </li>
+    
+      <li class="post">
+        <a href="/floating-point-precision-javascript/">Fix Floating Point Precision in JavaScript</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-dns-servers-linux-is-using/">How to Get List of DNS Servers Linux Is Using</a>
+      </li>
+    
+      <li class="post">
+        <a href="/get-list-files-inside-tar-archive-linux/">How to Get List of Files Inside a Tar Archive in Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/search-replace-commands-in-linux/">Search and Replace Commands in Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 -  -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'bootdb';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
